@@ -1,0 +1,18 @@
+==2209290== Memcheck, a memory error detector
+==2209290== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2209290== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2209290== Command: ./Initiator 370
+==2209290== 
+[Initiator] : With seed: 370
+[Worker]: Number of iterations is: 72
+[Worker]: Iteration with maximum vowel count is: 72
+ [Initiator]: Running ratio: 0.237251
+==2209290== 
+==2209290== HEAP SUMMARY:
+==2209290==     in use at exit: 0 bytes in 0 blocks
+==2209290==   total heap usage: 73 allocs, 73 frees, 20,837 bytes allocated
+==2209290== 
+==2209290== All heap blocks were freed -- no leaks are possible
+==2209290== 
+==2209290== For lists of detected and suppressed errors, rerun with: -s
+==2209290== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
