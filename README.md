@@ -39,28 +39,28 @@ The program outputs:
 - Serves as the main entry point for the program
 - Takes a seed value as a command-line argument
 - Initializes the random number generator with the provided seed
-- Calls <span style="color:yellow">get_running_ratio()</span> from the Worker module
+- Calls `get_running_ratio()` from the Worker module
 - Displays the seed value and final running ratio
 
 ### Worker.c
 - Implements three main functions:
-  - <span style="color:yellow">random_in_range()</span>: Generates random integers within specified bounds
-  - <span style="color:yellow">get_vowel_count()</span>: Scans a character array and counts uppercase vowels (A, E, I, O, U)
-  - <span style="color:yellow">get_running_ratio()</span>: Creates multiple random character arrays, counts vowels in each, tracks which iteration had the maximum vowel count, and calculates the average ratio of vowels to non-vowels
+  - `random_in_range()`: Generates random integers within specified bounds
+  - `get_vowel_count()`: Scans a character array and counts uppercase vowels (A, E, I, O, U)
+  - `get_running_ratio()`: Creates multiple random character arrays, counts vowels in each, tracks which iteration had the maximum vowel count, and calculates the average ratio of vowels to non-vowels
 
 ### Worker.h
 - Defines the interface for the Worker module
 - Declares the three functions implemented in Worker.c:
-  - <span style="color:yellow">random_in_range()</span>
-  - <span style="color:yellow">get_vowel_count()</span>
-  - <span style="color:yellow">get_running_ratio()</span>
+  - `random_in_range()`
+  - `get_vowel_count()`
+  - `get_running_ratio()`
 
 ### Makefile
 - Specifies the compiler (gcc) and compilation commands
 - Provides three targets:
-  - <span style="color:cyan">Default</span>: Compiles the source files into an executable named "Initiator"
-  - <span style="color:cyan">tar</span>: Creates a tarball of all project files
-  - <span style="color:cyan">clean</span>: Removes the executable and object files
+  - `Default`: Compiles the source files into an executable named "Initiator"
+  - `tar`: Creates a tarball of all project files
+  - `clean`: Removes the executable and object files
 
 
 ## Usage
