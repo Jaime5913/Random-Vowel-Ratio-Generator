@@ -1,0 +1,33 @@
+==2209429== Memcheck, a memory error detector
+==2209429== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2209429== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2209429== Command: ./Initiator 370
+==2209429== 
+==2209429== Invalid free() / delete / delete[] / realloc()
+==2209429==    at 0x4C39A93: free (vg_replace_malloc.c:872)
+==2209429==    by 0x4008FD: get_running_ratio (in /s/chopin/n/under/jaime591/CS370/hw1/Initiator)
+==2209429==    by 0x400742: main (in /s/chopin/n/under/jaime591/CS370/hw1/Initiator)
+==2209429==  Address 0x520e080 is 0 bytes inside a block of size 158 free'd
+==2209429==    at 0x4C39A93: free (vg_replace_malloc.c:872)
+==2209429==    by 0x4008F1: get_running_ratio (in /s/chopin/n/under/jaime591/CS370/hw1/Initiator)
+==2209429==    by 0x400742: main (in /s/chopin/n/under/jaime591/CS370/hw1/Initiator)
+==2209429==  Block was alloc'd at
+==2209429==    at 0x4C37135: malloc (vg_replace_malloc.c:381)
+==2209429==    by 0x40085B: get_running_ratio (in /s/chopin/n/under/jaime591/CS370/hw1/Initiator)
+==2209429==    by 0x400742: main (in /s/chopin/n/under/jaime591/CS370/hw1/Initiator)
+==2209429== 
+[Initiator] : With seed: 370
+[Worker]: Number of iterations is: 72
+[Worker]: Iteration with maximum vowel count is: 72
+ [Initiator]: Running ratio: 0.237251
+==2209429== 
+==2209429== HEAP SUMMARY:
+==2209429==     in use at exit: 0 bytes in 0 blocks
+==2209429==   total heap usage: 73 allocs, 145 frees, 20,837 bytes allocated
+==2209429== 
+==2209429== All heap blocks were freed -- no leaks are possible
+==2209429== 
+==2209429== For lists of detected and suppressed errors, rerun with: -s
+==2209429== ERROR SUMMARY: 72 errors from 1 contexts (suppressed: 0 from 0)
+
+This gave a memory leak because since I had already freed the memory there was nothing left to free wich caused a double free error, which in turn also caused a memory leak. 
